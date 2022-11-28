@@ -5,11 +5,7 @@ order: 4
 ---
 
 ## ParserCTP
-CTP系统行情接口, 继承了`IParserApi`, 很明显, 它的功能主要是管理行情api
-
-同时继承了`CThostFtdcMdSpi`, 这是CTP系统提供的行情接口, CTP行情api管理必须继承该类
-
-因此`ParserCTP`功能包括两部分, 一部分对接`IParserApi`, 实现行情登录, 连接, 订阅...等功能; 另一部分对接`CThostFtdcMdSpi`, 实现登录, 连接, 订阅, 行情...等响应
+`ParserCTP`功能包括两部分, 一部分对接`IParserApi`, 实现行情登录, 连接, 订阅...等功能; 另一部分对接`CThostFtdcMdSpi`, 实现登录, 连接, 订阅, 行情...等响应
 
 实际上`ParserCTP`既能管理行情api, 又能处理行情回调, 只不过它将行情回调的数据转移给了适配器进一步处理
 
