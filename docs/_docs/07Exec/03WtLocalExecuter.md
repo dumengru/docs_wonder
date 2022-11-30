@@ -1,17 +1,21 @@
 ---
-title: WtDiffExecuter
+title: WtLocalExecuter
 category: Exec
-order: 4
+order: 2
 ---
 
-## WtDiffExecuter
-继承`ExecuteContext`, `ITrdNotifySink`, `IExecCommand`
+## WtLocalExecuter
+本地执行器, 继承`ExecuteContext`, `ITrdNotifySink`, `IExecCommand`
 
 #### init
 1. 传入`executers.yaml`参数
 2. 获取参数
 - _scale: 数量放大倍数，即该执行器的目标仓位，是组合理论目标仓位的多少倍，可以为小数
+- _strict_sync: 是否开启严格同步
 - poolsize: 开启线程数量
+- 
+- clear: 过期主力自动清理配置
+- group: 
 
 #### setTrader
 设置交易适配器
@@ -47,8 +51,12 @@ order: 4
 - getSessionInfo: 回调引擎`_stub->get_sess_info`
 - getCurTime: 回调引擎_stub->get_real_time`
 
+#### set_position
+设置目标仓位
+(未完待续...)
+
 #### on_position
-无操作
+(未完待续...)
 
 #### 回调执行单元
 - on_position_changed: `unit->self()->set_position`
