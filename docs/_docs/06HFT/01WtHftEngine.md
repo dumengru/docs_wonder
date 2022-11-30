@@ -12,7 +12,7 @@ HFT策略引擎
 - get_order_detail_slice: 通过数据管理器获取逐笔委托数据
 - get_transaction_slice: 通过数据管理器获取逐笔成交数据
 
-#### 添加数据映射
+#### 订阅数据
 - sub_order_queue: 添加委托队列品种到`_ordque_sub_map`
 - sub_order_detail: 添加委托明细品种到`_orddtl_sub_map`
 - sub_transaction: 添加成交明细品种到`_trans_sub_map`

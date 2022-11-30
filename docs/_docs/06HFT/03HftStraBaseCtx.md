@@ -42,45 +42,43 @@ order: 3
 - stra_exit_long: 通过调用`_trader->closeLong`平仓多单
 - stra_exit_short: 通过调用`_trader->closeShort`平仓空单
 
-#### 获取数据
-- stra_get_comminfo
-- stra_get_bars
-- stra_get_ticks
-- stra_get_order_detail
-- stra_get_order_queue
-- stra_get_transaction
-- stra_get_last_tick
-- stra_get_rawcode
+#### 通过引擎获取数据
+- stra_get_comminfo: 通过引擎获取品种信息
+- stra_get_bars: 回调引擎`_engine->get_kline_slice`并订阅品种tick数据
+- stra_get_ticks: 回调引擎`_engine->get_tick_slice`并订阅品种tick数据
+- stra_get_order_detail: 回调引擎`_engine->get_order_detail_slice`, 并订阅`_engine->sub_order_detail`
+- stra_get_order_queue: 回调引擎`_engine->get_order_queue_slice`, 并订阅`_engine->sub_order_queue`
+- stra_get_transaction: 回调引擎`_engine->get_transaction_slice`, 并订阅`_engine->sub_transaction`
+- stra_get_last_tick: 回调引擎`_engine->get_last_tick`
+- stra_get_rawcode: 回调引擎`_engine->get_rawcode`
+- stra_get_date: 回调引擎`_engine->get_date`
+- stra_get_time: 回调引擎`_engine->get_raw_time`
+- stra_get_secs: 回调引擎`_engine->get_secs`
 
-#### 
+#### 通过引擎订阅数据
+- stra_sub_ticks: 订阅品种添加到`_tick_subs`, 回调引擎`_engine->sub_tick`
+- stra_sub_order_details: 回调引擎`_engine->sub_order_detail`
+- stra_sub_order_queues: 回调引擎`_engine->sub_order_queue`
+- stra_sub_transactions: 回调引擎`_engine->sub_transaction`
 
+#### 通过交易适配器获取数据
+- stra_get_position: 回调适配器`_trader->getPosition`
+- stra_get_undone: 回调适配器`_trader->getUndoneQty`
 
-#### 
+#### 其他方式获取数据
+- stra_get_position_avgpx: 从`_pos_map`获取持仓数据计算平均利润
+- stra_get_position_profit: 从`_pos_map`获取利润
+- stra_get_price
+    1. 通过`_price_map`获取价格, 找到即返回
+    2. 回调引擎`_engine->get_cur_price`
 
-
-#### 
-
-
-#### 
-
-
-
-#### 
-
-
-#### 
-
-
-#### 
-
-
-#### 
-
-
-#### 
-
-
-#### 
-
-
-#### 
+#### 策略回调函数
+- on_trade
+    1. 保存用户数据
+    2. 如果有信号, 输出信号
+    3. 调整持仓
+- on_order: 保存用户数据
+- on_channel_ready: 保存用户数据
+- on_channel_lost: 保存用户数据
+- on_entrust: 保存用户数据
+- on_position: 无操作
