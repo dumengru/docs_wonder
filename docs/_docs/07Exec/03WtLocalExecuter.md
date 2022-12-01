@@ -46,7 +46,7 @@ order: 2
 输出执行器日志
 
 #### 通过策略引擎获取数据
-`_stub`就是CTA策略引擎
+`_stub`就是策略引擎
 - getCommodityInfo: 回调引擎`_stub->get_comm_info` 
 - getSessionInfo: 回调引擎`_stub->get_sess_info`
 - getCurTime: 回调引擎_stub->get_real_time`

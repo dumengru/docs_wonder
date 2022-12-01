@@ -18,7 +18,8 @@ cta跳动器
 4. 时间校验(未完待续...)
 5. 如果分钟结束
     1. 回调数据读取器`_store->onMinuteEnd`
-    2. 回调策略引擎`_engine->on_minute_end`
+    2. 回调策略引擎`_engine->on_schedule`
+    3. 回调策略引擎`_engine->on_session_end`
 6. 触发`trigger_price`
 
 #### trigger_price
@@ -32,7 +33,7 @@ cta跳动器
 4. 启动线程
     1. 时间校验(未完待续...)
     2. 回调数据读取器`_store->onMinuteEnd`
-    3. 回调引擎`_engine->on_schedule`(hft没有)
+    3. 回调引擎`_engine->on_schedule`(hft没有, sel没有)
     4. 回调引擎`_engine->on_session_end`
 
 #### stop

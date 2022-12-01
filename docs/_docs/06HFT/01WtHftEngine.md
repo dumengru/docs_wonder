@@ -5,7 +5,7 @@ order: 1
 ---
 
 ## WtHftEngine
-HFT策略引擎
+继承`WtEngine`
 
 #### 获取数据 
 - get_order_queue_slice: 通过数据管理器获取委托队列数据
@@ -23,16 +23,12 @@ HFT策略引擎
 #### addContext
 添加上下文管理器
 
----
-
-> WtEngine接口
-
 #### init
 1. 父类初始化`WtEngine::init`
 2. 获取配置`_cfg`
 
 #### run
-1. 遍历策略上下文管理器, 并回调`ctx->on_init`(cta没有)
+1. 遍历策略上下文管理器, 并回调`ctx->on_init`(cta没有, 在on_init中)
 2. 创建ticker(暂且叫跳动器)对象, 并初始化"config.yaml/env/product"
 3. 策略数据落地"marker.json"
 4. 回调跳动器`_tm_ticker->run`

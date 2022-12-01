@@ -19,6 +19,7 @@ order: 2
 5. 如果分钟结束
     1. 回调数据读取器`_store->onMinuteEnd`
     2. 回调策略引擎`_engine->on_minute_end`
+    3. 回调策略引擎`_engine->on_session_end`
 6. 触发`trigger_price`
 
 #### trigger_price

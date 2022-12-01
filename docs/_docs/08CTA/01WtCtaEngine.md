@@ -7,18 +7,16 @@ order: 1
 ## WtCtaEngine
 继承`WtEngine`, `IExecuterStub`
 
-> WtEngine接口
-
 #### init
 1. 回调父类`WtEngine::init`
 2. 获取配置`_cfg`
-3. 设置信号过滤器`_exec_mgr.set_filter_mgr`
+3. 设置信号过滤器`_exec_mgr.set_filter_mgr`(hft没有, sel没有)
 
 #### run
 1. 创建ticker(跳动器)对象, 并初始化"config.yaml/env/product"
-3. 策略数据落地"marker.json"
-4. 回调跳动器`_tm_ticker->run`
-5. 回调风险管理器`_risk_mon->self()->run`(hft没有)
+2. 策略数据落地"marker.json"
+3. 回调跳动器`_tm_ticker->run`
+4. 回调风险管理器`_risk_mon->self()->run`(hft没有, sel没有)
 
 #### handle_push_quote
 1. 行情适配器`ParserAdapter`传递过来tick数据
@@ -34,8 +32,13 @@ order: 1
 
 #### on_bar
 1. 遍历bar数据订阅列表
-5. 获取品种策略上下文管理器
-6. 回调策略上下文管理器`ctx->on_bar`
+2. 获取品种策略上下文管理器
+3. 回调策略上下文管理器`ctx->on_bar`
+
+#### on_init
+1. 清理执行器目标仓位数据缓存
+2. 回调上下文管理`ctx->on_init`
+3. 回调上下文管理`ctx->enum_position`
 
 #### on_session_begin
 1. 回调父类`WtEngine::on_session_begin`
@@ -55,7 +58,7 @@ order: 1
 - get_comm_info: 回调基础数据管理器`_base_data_mgr->getCommodity`
 - get_sess_info: 回调基础数据管理器`_base_data_mgr->getSession`
 
-#### on_schedule(hft没有)
+#### on_schedule(hft没有, sel没有)
 1. 加载信号过滤器
 2. 清空执行器目标仓位缓存
 3. 获取上下文管理器, 回调`ctx->on_schedule`, 回调`ctx->enum_position`
@@ -73,8 +76,8 @@ order: 1
 添加/获取上下文管理器
 
 #### addExecuter
-添加执行器
+添加执行器, 并将自己传递给执行器的`_stub`
 
-#### loadRouterRules
+#### loadRouterRules(hft没有, sel没有)
 加载路由规则
 

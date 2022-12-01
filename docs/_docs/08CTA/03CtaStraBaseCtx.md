@@ -7,7 +7,6 @@ order: 3
 ## CtaStraBaseCtx
 继承`ICtaStraCtx`(和hft有区别)
 
-
 #### setTrader
 设置交易适配器
 
@@ -16,13 +15,14 @@ order: 3
 
 #### on_init
 1. 初始化数据输出模板
-2. 加载用户数据
+2. 加载资金, 仓位和信号数据(hft没有)
+3. 加载用户数据
 
 #### on_tick
 1. 在`_price_map`中保存最新价
 2. 检查交易信号
 3. 调整持仓`do_set_position`
-4. 如果是条件单触发, 回调``
+4. 如果是条件单触发, 回调`on_condition_triggered`
 5. 更新浮动盈亏
 6. 检查条件单
 7. 回调`on_tick_updated`
@@ -30,6 +30,9 @@ order: 3
 
 #### on_bar
 触发K线闭合, 回调`on_bar_close`
+
+#### on_schedule
+(未完待续...)
 
 #### on_session_begin(hft没有)
 每个交易日开始, 将冻结持仓置为零

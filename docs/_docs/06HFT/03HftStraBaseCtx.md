@@ -5,7 +5,7 @@ order: 3
 ---
 
 ## HftStraBaseCtx
-继承`IHftStraCtx`和`ITrdNotifySink`
+继承`IHftStraCtx`和`ITrdNotifySink`(cta没有)
 
 #### setTrader
 设置交易适配器
