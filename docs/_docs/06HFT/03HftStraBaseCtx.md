@@ -20,7 +20,7 @@ order: 3
 #### on_tick
 保存用户数据
 
-#### on_order_queue/on_order_detail/on_transaction/on_bar
+#### on_order_queue/on_order_detail/on_transaction/on_bar(cta没有)
 1. 通过引擎回调策略上下文管理器
 2. 保存用户数据
 
@@ -30,13 +30,13 @@ order: 3
 #### on_session_end
 遍历品种持仓数据并更新
 
-#### stra_cancel
+#### stra_cancel(cta没有)
 回调交易适配器`_trader->cancel`
 
 #### 下单函数
-- stra_cancel: 通过调用`_trader->cancel`撤单
-- stra_buy: 通过调用`_trader->buy`买入
-- stra_sell: 通过调用`_trader->sell`卖出
+- stra_cancel: 通过调用`_trader->cancel`撤单(cta没有)
+- stra_buy: 通过调用`_trader->buy`买入(cta没有)
+- stra_sell: 通过调用`_trader->sell`卖出(cta没有)
 - stra_enter_long: 通过调用`_trader->openLong`开仓多单
 - stra_enter_short: 通过调用`_trader->openShort`开仓空单
 - stra_exit_long: 通过调用`_trader->closeLong`平仓多单
@@ -72,7 +72,7 @@ order: 3
     1. 通过`_price_map`获取价格, 找到即返回
     2. 回调引擎`_engine->get_cur_price`
 
-#### 策略回调函数
+#### 策略回调函数(cta没有)
 - on_trade
     1. 保存用户数据
     2. 如果有信号, 输出信号

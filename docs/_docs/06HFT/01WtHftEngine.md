@@ -32,7 +32,7 @@ HFT策略引擎
 2. 获取配置`_cfg`
 
 #### run
-1. 遍历策略上下文管理器, 并回调`ctx->on_init`
+1. 遍历策略上下文管理器, 并回调`ctx->on_init`(cta没有)
 2. 创建ticker(暂且叫跳动器)对象, 并初始化"config.yaml/env/product"
 3. 策略数据落地"marker.json"
 4. 回调跳动器`_tm_ticker->run`
@@ -41,19 +41,19 @@ HFT策略引擎
 1. 行情适配器`ParserAdapter`传递过来tick数据
 2. 回调跳动器`_tm_ticker->on_tick`
 
-#### handle_push_order_detail
+#### handle_push_order_detail(cta没有)
 1. 行情适配器`ParserAdapter`传递过来逐笔委托数据
 2. 获取品种委托明细
 3. 遍历策略订阅列表
 4. 获取策略上下文管理器, 回调`ctx->on_order_detail`
 
-#### handle_push_order_queue
+#### handle_push_order_queue(cta没有)
 1. 行情适配器`ParserAdapter`传递过来委托队列数据
 2. 获取品种委托队列
 3. 遍历策略订阅列表
 4. 获取策略上下文管理器, 回调`ctx->on_order_queue`
 
-#### handle_push_transaction
+#### handle_push_transaction(cta没有)
 1. 行情适配器`ParserAdapter`传递过来逐笔成交数据
 2. 获取品种成交明细
 3. 遍历策略订阅列表
@@ -70,7 +70,7 @@ HFT策略引擎
 #### on_bar
 1. 遍历bar数据订阅列表
 5. 获取品种策略上下文管理器
-6. 回调策略上下文管理器`ctx->on_tick`
+6. 回调策略上下文管理器`ctx->on_bar`
 
 #### on_session_begin
 1. 回调父类`WtEngine::on_session_begin`

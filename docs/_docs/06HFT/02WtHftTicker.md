@@ -32,7 +32,7 @@ order: 2
 4. 启动线程
     1. 时间校验(未完待续...)
     2. 回调数据读取器`_store->onMinuteEnd`
-    3. 回调引擎`_engine->on_minute_end`
+    3. 回调引擎`_engine->on_minute_end`(cta没有)
     4. 回调引擎`_engine->on_session_end`
 
 #### stop
