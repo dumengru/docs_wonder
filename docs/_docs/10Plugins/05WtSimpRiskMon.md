@@ -1,5 +1,5 @@
 ---
 title: WtSimpRiskMon
 category: Plugins
-order: 05
+order: 5
 ---

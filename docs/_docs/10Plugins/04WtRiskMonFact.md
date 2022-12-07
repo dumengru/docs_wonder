@@ -1,7 +1,7 @@
 ---
 title: WtRiskMonFact
 category: Plugins
-order: 04
+order: 4
 ---
 
 ## WtRiskMonFact

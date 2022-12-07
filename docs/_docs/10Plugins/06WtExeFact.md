@@ -1,5 +1,5 @@
 ---
 title: WtExeFact
 category: Plugins
-order: 06
+order: 6
 ---

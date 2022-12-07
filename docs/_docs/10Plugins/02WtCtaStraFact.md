@@ -1,7 +1,7 @@
 ---
 title: WtCtaStraFact
 category: Plugins
-order: 02
+order: 2
 ---
 
 ## WtStraFact

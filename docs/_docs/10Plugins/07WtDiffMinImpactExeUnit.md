@@ -1,5 +1,5 @@
 ---
 title: WtDiffMinImpactExeUnit
 category: Plugins
-order: 07
+order: 7
 ---

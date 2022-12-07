@@ -1,7 +1,7 @@
 ---
 title: WtHftStraFact
 category: Plugins
-order: 01
+order: 1
 ---
 
 ## WtHftStraFact

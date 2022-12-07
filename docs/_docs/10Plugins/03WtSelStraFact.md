@@ -1,7 +1,7 @@
 ---
 title: WtSelStraFact
 category: Plugins
-order: 03
+order: 3
 ---
 
 ## WtSelStraFact
