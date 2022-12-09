@@ -4,9 +4,10 @@ category: 入门
 order: 4
 ---
 
-
 ## 前情提示
-HFT是几个交易引擎中逻辑最简单的, 因此我测试仿真使用HFT引擎. 本篇使用openctp项目做测试
+高频策略引擎，主要针对高频或者低延时策略，事件驱动，系统延迟在1-2微秒之间
+
+HFT是逻辑较简单. 本篇使用openctp项目做测试
 
 **[openct项目地址](https://github.com/krenx1983/openctp)**
 
@@ -47,7 +48,7 @@ strategies:
             offset: 1
             second: 10
             stock: false
-        trader: simnow
+        trader: tts
 
 #环境配置
 env:
@@ -60,7 +61,7 @@ traders: tdtraders.yaml     #交易通道配置文件
 bspolicy: actpolicy.yaml    #开平策略配置文件
 ```
 
-2. 修改"tdparsers.yaml"文件如下
+2. 修改"tdparsers.yaml"文件如下(注意修改用户名和密码)
 
 ```yaml
 parsers:
@@ -70,18 +71,18 @@ parsers:
     front: tcp://121.36.146.182:20004
     id: parser
     module: ParserCTP
-    pass:       # openctp用户名
-    user:       # openctp密码
+    user:       # openctp用户名
+    pass:       # openctp密码
     localtime: true
     code: SHFE.rb2303
 ```
 
-3. 修改""文件如下
+3. 修改""文件如下(注意修改用户名和密码)
 
 ```yaml
 traders:
 -   active: true
-    id: simnow          # id
+    id: tts          # id
     module: TraderCTP   # 模块文件名，win下会自动转成xxx.dll，linux会自动转成libxxx.so
     savedata: true      # 是否保存数据，如果为true，会将接口拉取到的成交、订单、资金和持仓都写到本地文件中
     riskmon:            # 通道风控配置
@@ -99,8 +100,8 @@ traders:
     broker: ''                      
     appid: 
     authcode: ''    
-    user:       # 
-    pass:       # 
+    user:       # openctp用户名
+    pass:       # openctp密码
     quick: true 
 ```
 

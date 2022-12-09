@@ -57,7 +57,7 @@ writer:
 ```yaml
 parsers:
 -   active: true
-    broker: '9999'
+    broker: ''
     front: tcp://121.37.80.177:20004    # 7*24小时地址
     id: parser
     module: ParserCTP

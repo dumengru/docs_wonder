@@ -39,8 +39,8 @@ order: 4
 
 #### ExecuteDefs
 1. ExecuteContext: 执行环境
-2. ExecuteUnit: 执行单元
-3. IExecuterFact: 执行单元工厂
+2. ExecuteUnit: 执行器
+3. IExecuterFact: 执行器工厂
 4. 定义函数
 - FuncCreateExeFact: 创建执行工厂
 - FuncDeleteExeFact: 删除执行工厂
