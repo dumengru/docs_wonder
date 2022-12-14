@@ -1,12 +1,11 @@
 ---
 title: TraderCTP
-category: traders
+category: Traders
 order: 4
 ---
 
 ## TraderCTP
 `ParserCTP`功能包括两部分, 一部分对接`IParserApi`, 实现行情登录, 连接, 订阅...等功能; 另一部分对接`CThostFtdcMdSpi`, 实现登录, 连接, 订阅, 行情...等响应
-
 
 ---
 

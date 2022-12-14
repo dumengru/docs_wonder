@@ -1,6 +1,6 @@
 ---
 title: EventNotifier
-category: common
+category: Product_Common
 order: 2
 ---
 

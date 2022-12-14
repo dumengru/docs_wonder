@@ -1,6 +1,6 @@
 ---
 title: ParserCTP
-category: parsers
+category: Parsers
 order: 4
 ---
 

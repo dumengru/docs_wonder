@@ -1,6 +1,6 @@
 ---
 title: HftStrategyMgr
-category: HFT
+category: Product_HFT
 order: 5
 ---
 

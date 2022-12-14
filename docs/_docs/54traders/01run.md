@@ -1,6 +1,6 @@
 ---
 title: run
-category: traders
+category: Traders
 order: 1
 ---
 

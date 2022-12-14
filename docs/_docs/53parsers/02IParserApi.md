@@ -1,6 +1,6 @@
 ---
 title: IParserApi
-category: parsers
+category: Parsers
 order: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: QuoteFactory
 category: 入门
-order: 1
+order: 4
 ---
 
 ## 前情提示

@@ -1,6 +1,6 @@
 ---
 title: CtaStrategyMgr
-category: CTA
+category: Product_CTA
 order: 5
 ---
 

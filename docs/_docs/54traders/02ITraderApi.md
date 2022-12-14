@@ -1,6 +1,6 @@
 ---
 title: ITraderApi
-category: traders
+category: Traders
 order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: CtaStraBaseCtx
-category: CTA
+category: Product_CTA
 order: 3
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: TraderAdapter
-category: traders
+category: Traders
 order: 3
 ---
 
@@ -182,7 +182,6 @@ _id: 交易适配器id
 
 #### handleTraderLog
 输出交易日志
-
 
 ## TraderAdapterMgr
 交易适配管理器, 主要负责同时管理多个交易适配器

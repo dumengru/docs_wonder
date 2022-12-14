@@ -1,7 +1,7 @@
 ---
-title: 状态机
-category: 数据进阶
-order: 4
+title: StateMonitor
+category: DataKit
+order: 5
 ---
 
 ## StateMonitor
@@ -74,4 +74,3 @@ order: 4
 - isAllInState: 是否所有品种处于某状态
 - isAnyInState: 是否有品种处于某状态
 - isInState: 某品种是否处于某状态
-

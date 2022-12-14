@@ -1,6 +1,6 @@
 ---
 title: WtSelTicker
-category: SEL
+category: Product_SEL
 order: 2
 ---
 

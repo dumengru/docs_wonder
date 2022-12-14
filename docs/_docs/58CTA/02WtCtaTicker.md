@@ -1,6 +1,6 @@
 ---
 title: WtCtaTicker
-category: CTA
+category: Product_CTA
 order: 2
 ---
 

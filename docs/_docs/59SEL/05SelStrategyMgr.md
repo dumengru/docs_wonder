@@ -1,6 +1,6 @@
 ---
 title: SelStrategyMgr
-category: SEL
+category: Product_SEL
 order: 5
 ---
 

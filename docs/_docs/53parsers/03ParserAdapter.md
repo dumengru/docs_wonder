@@ -1,6 +1,6 @@
 ---
 title: ParserAdapter
-category: parsers
+category: Parsers
 order: 3
 ---
 
@@ -14,6 +14,12 @@ order: 3
 
 ## ParserAdapter
 行情适配器, 继承了`IParserSpi`, 很明显, 它的功能主要是处理行情回调.(boost::noncopyable, 限制该类为单例类)
+
+#### ParserAdapter
+构造函数传入
+- `_bd_mgr`: 基础信息管理器`WTSBaseDataMgr`
+- `_dt_mgr`: 数据管理器`DataManager`
+- `_idx_fact`: 指数工厂
 
 #### init
 默认初始化(需要配置), 传入参数
